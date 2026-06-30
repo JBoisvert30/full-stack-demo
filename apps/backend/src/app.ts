@@ -29,7 +29,7 @@ setupSwagger(app);
 
 // listen for requests on root and send simple text response
 app.get("/",  (_req, res) => {
-    res.send("Got response from backend!");
+    res.send("Got response from backend!" + process.env.FRONTEND_URL);
 });
 
 // use termRoutes
