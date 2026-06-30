@@ -31,7 +31,9 @@
     "@prisma/client": "^6.19.3",
     "@types/cors": "^2.8.17",
     "@types/morgan": "^1.9.9",
+    "@types/dotenv": "^6.1.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
     "express": "^4.21.2",
     "joi": "^17.13.3",
     "morgan": "^1.10.0"
