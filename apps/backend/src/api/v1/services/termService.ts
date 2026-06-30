@@ -1,6 +1,7 @@
 // Use the term type defined in prisma/schema.prisma
 import { Term } from "@prisma/client";
 // initialize a prisma client if not already and use in queries here
+//import { prisma } from "../../../lib/prisma";
 import prisma from "../../../../prisma/client";
 
 /**

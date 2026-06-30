@@ -32,7 +32,7 @@ export const getTermById = async(
 ): Promise<void> => {
     try {
         const term: Term | null = 
-            await termService.getTermById(Number.parseInt(req.params.id));
+            await termService.getTermById(Number.parseInt(String(req.params.id)));
         if(term) {
             res.json(successResponse(term, "Term retrieved succesfully"));
         } else{
@@ -64,7 +64,7 @@ export const updateTerm = async(
 ): Promise<void> => {
     try {
         const updatedTerm = await termService.updateTerm(
-            Number.parseInt(req.params.id),
+            Number.parseInt(String(req.params.id)),
             req.body
         );
         res.status(200)
@@ -80,7 +80,7 @@ export const deleteTerm = async(
     next: NextFunction
 ): Promise<void> => {
     try {
-        await termService.deleteTerm(Number.parseInt(req.params.id));
+        await termService.deleteTerm(Number.parseInt(String(req.params.id)));
         res.status(200)
             .json(successResponse(null, "Term deleted succesfully"));
     } catch(error) {
